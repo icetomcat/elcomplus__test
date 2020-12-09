@@ -28,7 +28,7 @@ export class Refill extends BaseEntity {
   quantity: number;
 
   // @Field(() => Car)
-  @ManyToOne(() => Car)
+  @ManyToOne(() => Car, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'carId' })
   car: Car;
 
@@ -37,7 +37,7 @@ export class Refill extends BaseEntity {
   carId: string;
 
   // @Field(() => GasStation)
-  @ManyToOne(() => GasStation)
+  @ManyToOne(() => GasStation, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'stationId' })
   station: GasStation;
 
