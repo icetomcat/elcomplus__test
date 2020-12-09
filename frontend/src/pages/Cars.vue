@@ -1,5 +1,8 @@
 <template>
   <q-table
+      :pagination="{
+        rowsPerPage: 25,
+      }"
       :title="$t('page.cars')"
       :data="cars"
       :columns="[
@@ -11,7 +14,6 @@
         {name: 'actions', align: 'right',label: '', field: ''},
       ]"
       row-key="id"
-      hide-pagination
     >
       <template v-slot:body-cell-id="props">
         <q-td :props="props">
