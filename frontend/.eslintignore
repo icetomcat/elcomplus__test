@@ -1,0 +1,7 @@
+/dist
+/src-bex/www
+/src-capacitor
+/src-cordova
+/.quasar
+/.dev_profile
+/node_modules
