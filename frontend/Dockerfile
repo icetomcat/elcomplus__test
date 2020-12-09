@@ -13,7 +13,7 @@ RUN set -eux; \
 
 COPY . ./
 
-VOLUME /usr/src/admin/node_modules
+VOLUME /app/node_modules
 
 ENV HTTPS true
 CMD ["quasar", "dev"]

@@ -31,6 +31,7 @@ services:
         protocol: tcp
     volumes:
       - ./frontend:/app:rw,cached
+      - /app/node_modules/
 
   api:
     build:
@@ -50,4 +51,4 @@ services:
         protocol: tcp
     volumes:
       - ./api:/app:rw,cached
-
+      - /app/node_modules/
