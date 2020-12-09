@@ -24,7 +24,9 @@ export class CarMixin extends Vue {
             type: 'positive',
             message: this.$t('notify.model.car.deleted.message').toString()
           })
-          resolve(value)
+          return Refill.delete((refill) => refill.carId === car?.id).then(() => {
+            resolve(value)
+          })
         }).catch((reason) => {
           this.$q.notify({
             type: 'negative',
@@ -148,7 +150,9 @@ export class GasStationMixin extends Vue {
             type: 'positive',
             message: this.$t('notify.model.station.deleted.message').toString()
           })
-          resolve(value)
+          return Refill.delete((refill) => refill.stationId === station?.id).then(() => {
+            resolve(value)
+          })
         }).catch((reason) => {
           this.$q.notify({
             type: 'negative',
